@@ -55,9 +55,13 @@ public class CollectionDemo {
 
     public static void mapDemo(){
         /**
-         *
+         * - 底层结构 数组 + 链表 + 红黑树
+         * - 默认初始化容量 16，负载因子为 0.75
          */
         Map<Object, Object> hashMap = new HashMap<>();
+        /**
+         * - 默认初始化容量为 11，负载因子为 0.75，线程安全
+         */
         Map<Object, Object> hashtable = new Hashtable<>();
         Map<Object, Object> treeMap = new TreeMap<>();
         Map<Object, Object> linkedHashMap = new LinkedHashMap<>();
@@ -68,13 +72,13 @@ public class CollectionDemo {
     public static void setDemo(){
 
         /**
-         * - 底层实现为 HashMap，初始容量为 16，加载因子为 0.75
+         * - 底层实现为 HashMap，初始容量为 16，负载因子为 0.75
          * - map.put(e, PRESENT)==null 添加方法有一个是添加到 key上面，value默认为一个 object常量
          */
         Set hashSet = new HashSet<>();
 
         /**
-         * - 继承自 HashSet,初始容量为 16，加载因子为 0.75；
+         * - 继承自 HashSet,初始容量为 16，负载因子为 0.75；
          * - 最底层使用 LinkedHashMap实现，保证了元素的顺序
          */
         Set linkedHashSet = new LinkedHashSet<>();
