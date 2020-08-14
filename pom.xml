@@ -11,6 +11,7 @@
     <modules>
         <module>learn-codesource</module>
         <module>learn-algorithm</module>
+        <module>learn-spring</module>
     </modules>
 
     <parent>
