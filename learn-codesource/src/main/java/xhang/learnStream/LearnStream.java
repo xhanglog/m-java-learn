@@ -24,10 +24,14 @@ public class LearnStream {
          * filter 里边是filter(Predicate<? super T> predicate) 判定型接口
          *
          * map map(Function<? super T, ? extends R> mapper) 函数型接口
+         *
+         * sorted sorted(Comparator<? super T> comparator) 函数型接口，比较器
          */
         list.stream().filter(p->{return p.getId() %2 == 0;}) // 筛选偶数ID
                 .filter(p->{return p.getAge() > 24;}) //筛选年龄大于24
-                .map(u->{return u.getUserName().toUpperCase();})
+                .map(u->{return u.getUserName().toUpperCase();}) // 户名转为大写
+                .sorted((t1,t2)->{return t2.compareTo(t1);}) // 倒序排序
+                .limit(1) // 获取一个数据
                 .forEach(System.out::println);
     }
 }
