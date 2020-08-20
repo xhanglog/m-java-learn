@@ -1,4 +1,4 @@
-package xh.codesource;
+package xhang.codesource;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
@@ -8,6 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * @Author xhang
  * Date 2020/6/15
+ * 阻塞队列生产者消费者示例代码
  **/
 class MyResource{
 
