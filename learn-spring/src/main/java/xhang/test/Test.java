@@ -13,7 +13,7 @@ public class Test {
         // 启动sprig
         MyApplicationContext context = new MyApplicationContext(AppConfig.class);
         // getBean()
-       /* OrderService orderService = (OrderService)context.getBean("orderService");
+        OrderService orderService = (OrderService)context.getBean("orderService");
 
         System.out.println("====================测试属性注入==============");
         orderService.print();
@@ -26,7 +26,7 @@ public class Test {
         System.out.println("==============测试原型======================");
         System.out.println(context.getBean("orderService"));
         System.out.println(context.getBean("orderService"));
-        System.out.println(context.getBean("orderService"));*/
+        System.out.println(context.getBean("orderService"));
 
         System.out.println(context.getBean("orderService"));
     }

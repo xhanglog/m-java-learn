@@ -12,6 +12,7 @@
         <module>learn-codesource</module>
         <module>learn-algorithm</module>
         <module>learn-spring</module>
+        <module>learn-springmvc</module>
     </modules>
 
     <parent>
