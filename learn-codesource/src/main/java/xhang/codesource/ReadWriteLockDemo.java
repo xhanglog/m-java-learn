@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * @Author xhang
- * Date 2020/6/7
+ * Date 2020/8/7
  * 读写锁,只允许一个线程进行写的操作，可以同时读取数据
  *
  **/

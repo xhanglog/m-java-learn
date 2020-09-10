@@ -4,11 +4,10 @@ import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
-        * Description: 集合类不安全的问题
-        *
-        * @author veliger@163.com
-        * @date 2019-04-12 22:15
-        **/
+* Description: 集合类不安全的问题
+*
+* @date 2019-08-12 22:15
+**/
 public class ContainerNotSafeDemo {
     /**
      * 笔记

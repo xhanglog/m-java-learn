@@ -6,8 +6,7 @@ import java.util.concurrent.atomic.AtomicStampedReference;
 /**
  * Description: ABA问题的解决
  *
- * @author veliger@163.com
- * @date 2019-04-12 21:30
+ * @date 2019-08-12 21:30
  **/
 public class ABADemo {
     private static AtomicStampedReference<Integer> stampedReference = new AtomicStampedReference<>(100, 1);
