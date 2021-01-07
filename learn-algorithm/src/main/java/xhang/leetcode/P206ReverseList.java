@@ -32,7 +32,7 @@ public class P206ReverseList {
     public ListNode reverseList2(ListNode head) {
         ListNode pre = null;
         ListNode cur = head;
-        ListNode nxt = head;
+        ListNode nxt = null;
         while (cur != null){
             nxt = cur.next; // nxt指针后移到下一个节点
             cur.next = pre; // cur的下一个节点指向pre，实现部分反转
