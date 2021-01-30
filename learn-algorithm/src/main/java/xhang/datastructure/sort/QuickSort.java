@@ -9,11 +9,17 @@ import java.util.Arrays;
 public class QuickSort {
 
     public static void main(String[] args) {
-        int arr[] = {12, 10, 33, 6, 21, 3, 18, 1,4,20,80,15,6};
-        QuickSort.quickSort(arr, 0, arr.length - 1);
+        int arr[] = {12, 10, 33, 6, 21, 3, 312, 1, 31, 32, 9, 4, 4};
+        QuickSort.quickSort2(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
 
+    /**
+     * 以中点为基准位置
+     * @param arr
+     * @param left
+     * @param right
+     */
     public static void quickSort(int[] arr, int left, int right) {
         if (arr == null || arr.length < 2) {//数组为空或者长度为1直接返回
             return;
@@ -53,5 +59,31 @@ public class QuickSort {
         if (right > low) {//右递归，对右边部分进行排序
             quickSort(arr, low, right);
         }
+    }
+
+    /**
+     * 以起点位置为参考
+     * @param arr
+     * @param left
+     * @param right
+     */
+    public static void quickSort2(int[] arr, int left, int right) {
+        if (left >= right) return;
+        int low = left;
+        int high = right;
+        int temp = arr[low];
+        while (low < high) {
+            while (low < high && arr[high] >= temp) {
+                high--;
+            }
+            arr[low] = arr[high];
+            while (low < high && arr[low] <= temp) {
+                low++;
+            }
+            arr[high] = arr[low];
+        }
+        arr[low] = temp;
+        quickSort2(arr, left, low - 1);
+        quickSort2(arr, low + 1, right);
     }
 }
